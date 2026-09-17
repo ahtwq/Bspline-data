@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "name": "acc_peaks_n0020000_feature_clean_seed100",
+  "experiment": "acc",
+  "purpose": "解析 Peaks 真值；高变化区域加密采样与局部细节恢复能力；无噪声精度；较大规模效率",
+  "surface": "peaks",
+  "num_points": 20000,
+  "sampling": "feature",
+  "parameter_domain": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "seed": 100,
+  "surface_seed": null,
+  "boundary_ratio_requested": 0.08,
+  "num_corners": 4,
+  "num_boundary_scatter": 1596,
+  "num_interior": 18400,
+  "sample_kind_encoding": {
+    "interior": 0,
+    "boundary": 1,
+    "corner": 2
+  },
+  "noise_model": "independent isotropic Gaussian XYZ",
+  "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+  "noise_sigma_absolute": 0.0,
+  "reference_grid_resolution": [
+    101,
+    101
+  ],
+  "observed_points_file": "acc_peaks_n0020000_feature_clean_seed100.txt",
+  "ground_truth_file": "acc_peaks_n0020000_feature_clean_seed100.npz",
+  "visualization_file": "acc_peaks_n0020000_feature_clean_seed100.png",
+  "visualization_surface_alpha": 0.7,
+  "visualization_points_always_on_top": true,
+  "visualized_point_count": 20000,
+  "truth_type": "analytic",
+  "analytic_function": "MATLAB peaks(x,y)",
+  "xy_domain": [
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -3.0,
+      3.0
+    ]
+  ],
+  "sha256_txt": "bc072460df0bf588c39eb772eb2900591c829f6bd55608b3bcb85f4c7d803398"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "name": "dof_peaks_n0100000_clustered_clean_seed100",
+  "experiment": "dof",
+  "purpose": "固定输入下的控制自由度与预条件求解器扩展；解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+  "surface": "peaks",
+  "num_points": 100000,
+  "sampling": "clustered",
+  "parameter_domain": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "seed": 100,
+  "surface_seed": null,
+  "boundary_ratio_requested": 0.08,
+  "num_corners": 4,
+  "num_boundary_scatter": 7996,
+  "num_interior": 92000,
+  "sample_kind_encoding": {
+    "interior": 0,
+    "boundary": 1,
+    "corner": 2
+  },
+  "noise_model": "independent isotropic Gaussian XYZ",
+  "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+  "noise_sigma_absolute": 0.0,
+  "reference_grid_resolution": [
+    101,
+    101
+  ],
+  "observed_points_file": "dof_peaks_n0100000_clustered_clean_seed100.txt",
+  "ground_truth_file": "dof_peaks_n0100000_clustered_clean_seed100.npz",
+  "visualization_file": "dof_peaks_n0100000_clustered_clean_seed100.png",
+  "visualization_surface_alpha": 0.7,
+  "visualization_points_always_on_top": true,
+  "visualized_point_count": 20000,
+  "recommended_fit_control_grids": [
+    [
+      10,
+      10
+    ],
+    [
+      15,
+      15
+    ],
+    [
+      18,
+      18
+    ],
+    [
+      34,
+      34
+    ],
+    [
+      66,
+      66
+    ]
+  ],
+  "recommended_num_iknot": [
+    [
+      6,
+      6
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      14,
+      14
+    ],
+    [
+      30,
+      30
+    ],
+    [
+      62,
+      62
+    ]
+  ],
+  "truth_type": "analytic",
+  "analytic_function": "MATLAB peaks(x,y)",
+  "xy_domain": [
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -3.0,
+      3.0
+    ]
+  ],
+  "sha256_txt": "7dcbf6ed3798b1a0afdde302996e9c2d710968a62fef7271b734a5a970c33b3d"
+}

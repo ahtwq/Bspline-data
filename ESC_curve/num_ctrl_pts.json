@@ -1,0 +1,7 @@
+{
+  "density_jump": 18,
+  "multi_cluster": 25,
+  "sharp_corner": 12,
+  "extreme_density_ratio": 35,
+  "spiral_collapse": 20
+}

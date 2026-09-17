@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "name": "acc_bspline15x15_n0020000_feature_clean_seed100",
+  "experiment": "acc",
+  "purpose": "精确 B 样条真值与控制网格恢复；高变化区域加密采样与局部细节恢复能力；无噪声精度；较大规模效率",
+  "surface": "bspline",
+  "num_points": 20000,
+  "sampling": "feature",
+  "parameter_domain": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "seed": 100,
+  "surface_seed": 20260908,
+  "boundary_ratio_requested": 0.08,
+  "num_corners": 4,
+  "num_boundary_scatter": 1596,
+  "num_interior": 18400,
+  "sample_kind_encoding": {
+    "interior": 0,
+    "boundary": 1,
+    "corner": 2
+  },
+  "noise_model": "independent isotropic Gaussian XYZ",
+  "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+  "noise_sigma_absolute": 0.0,
+  "reference_grid_resolution": [
+    101,
+    101
+  ],
+  "observed_points_file": "acc_bspline15x15_n0020000_feature_clean_seed100.txt",
+  "ground_truth_file": "acc_bspline15x15_n0020000_feature_clean_seed100.npz",
+  "visualization_file": "acc_bspline15x15_n0020000_feature_clean_seed100.png",
+  "visualization_surface_alpha": 0.7,
+  "visualization_points_always_on_top": true,
+  "visualized_point_count": 20000,
+  "truth_type": "tensor_product_bspline",
+  "degree_u": 3,
+  "degree_v": 3,
+  "num_control_u": 15,
+  "num_control_v": 15,
+  "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+  "knot_type": "open-clamped mildly nonuniform",
+  "control_surface_profile": "multi_feature_radial_hat",
+  "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+  "control_surface_components": [
+    "1.55*sin(d)/d, d=(x^2+y^2)/2",
+    "off-center anisotropic positive Gaussian",
+    "second off-center anisotropic positive Gaussian",
+    "off-center anisotropic negative Gaussian",
+    "sinusoidally curved Gaussian ridge",
+    "damped directional wave",
+    "localized xy twist"
+  ],
+  "control_xy_range": [
+    [
+      -4.0,
+      4.0
+    ],
+    [
+      -4.0,
+      4.0
+    ]
+  ],
+  "sha256_txt": "89ce38b4d833f2306ed5b942fbb5f72e8245941e9a08e5180083b307d9497e1c"
+}

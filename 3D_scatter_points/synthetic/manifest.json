@@ -1,0 +1,1543 @@
+{
+  "schema_version": 1,
+  "suite": "surface reconstruction accuracy and scaling benchmark",
+  "generator": "gen_irregular_data.py",
+  "dataset_count": 20,
+  "selected_suites": [
+    "accuracy",
+    "efficiency",
+    "dof"
+  ],
+  "suite_definitions": {
+    "accuracy": {
+      "surfaces": [
+        "peaks",
+        "bspline"
+      ],
+      "seed": 100,
+      "fractional_design_cases": [
+        {
+          "num_points": 600,
+          "sampling": "uniform",
+          "noise": 0.0
+        },
+        {
+          "num_points": 5000,
+          "sampling": "uniform",
+          "noise": 0.0
+        },
+        {
+          "num_points": 5000,
+          "sampling": "clustered",
+          "noise": 0.0
+        },
+        {
+          "num_points": 5000,
+          "sampling": "clustered",
+          "noise": 0.005
+        },
+        {
+          "num_points": 5000,
+          "sampling": "sparse",
+          "noise": 0.0
+        },
+        {
+          "num_points": 20000,
+          "sampling": "feature",
+          "noise": 0.0
+        }
+      ]
+    },
+    "efficiency": {
+      "surfaces": [
+        "peaks",
+        "bspline"
+      ],
+      "num_points": [
+        100000,
+        500000,
+        1000000
+      ],
+      "sampling": "clustered",
+      "noise": 0.0,
+      "seed": 100
+    },
+    "dof": {
+      "surfaces": [
+        "peaks",
+        "bspline"
+      ],
+      "num_points": 100000,
+      "sampling": "clustered",
+      "noise": 0.0,
+      "seed": 100,
+      "fit_control_grids": [
+        [
+          10,
+          10
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          66,
+          66
+        ]
+      ],
+      "num_iknot_values": [
+        [
+          6,
+          6
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          62,
+          62
+        ]
+      ]
+    },
+    "boundary_ratio": 0.08
+  },
+  "datasets": [
+    {
+      "schema_version": 1,
+      "name": "acc_peaks_n0000600_uniform_clean_seed100",
+      "experiment": "acc",
+      "purpose": "解析 Peaks 真值；均匀非网格采样基准；无噪声精度；小规模效率",
+      "surface": "peaks",
+      "num_points": 600,
+      "sampling": "uniform",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 44,
+      "num_interior": 552,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_peaks_n0000600_uniform_clean_seed100.txt",
+      "ground_truth_file": "acc_peaks_n0000600_uniform_clean_seed100.npz",
+      "visualization_file": "acc_peaks_n0000600_uniform_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 600,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "7f6519862740926767db1b1112f0962225ee2958022a31b8955a5580feb2f2b1"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_peaks_n0005000_uniform_clean_seed100",
+      "experiment": "acc",
+      "purpose": "解析 Peaks 真值；均匀非网格采样基准；无噪声精度；中等规模效率",
+      "surface": "peaks",
+      "num_points": 5000,
+      "sampling": "uniform",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_peaks_n0005000_uniform_clean_seed100.txt",
+      "ground_truth_file": "acc_peaks_n0005000_uniform_clean_seed100.npz",
+      "visualization_file": "acc_peaks_n0005000_uniform_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "c30af9f06eecbc3b84e86ce3e86cf899d10c20c9c08c402aa2b806962fb32d24"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_peaks_n0005000_clustered_clean_seed100",
+      "experiment": "acc",
+      "purpose": "解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；中等规模效率",
+      "surface": "peaks",
+      "num_points": 5000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_peaks_n0005000_clustered_clean_seed100.txt",
+      "ground_truth_file": "acc_peaks_n0005000_clustered_clean_seed100.npz",
+      "visualization_file": "acc_peaks_n0005000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "2bd7235b74c74b66c99ddb1abe5bf093590ebf2655961c2b62f28fca8b7b72bb"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_peaks_n0005000_clustered_noise005_seed100",
+      "experiment": "acc",
+      "purpose": "解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；含噪稳健性；中等规模效率",
+      "surface": "peaks",
+      "num_points": 5000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.005,
+      "noise_sigma_absolute": 0.08463921596789595,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_peaks_n0005000_clustered_noise005_seed100.txt",
+      "ground_truth_file": "acc_peaks_n0005000_clustered_noise005_seed100.npz",
+      "visualization_file": "acc_peaks_n0005000_clustered_noise005_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "b388b101d13b7a334c06ec70f3fd3adecfd02629656f220d805815ee65a61ee2"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_peaks_n0005000_sparse_clean_seed100",
+      "experiment": "acc",
+      "purpose": "解析 Peaks 真值；局部稀疏覆盖、SW稳定性与空洞区域外推能力；无噪声精度；中等规模效率",
+      "surface": "peaks",
+      "num_points": 5000,
+      "sampling": "sparse",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_peaks_n0005000_sparse_clean_seed100.txt",
+      "ground_truth_file": "acc_peaks_n0005000_sparse_clean_seed100.npz",
+      "visualization_file": "acc_peaks_n0005000_sparse_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "sparse_regions": [
+        {
+          "shape": "ellipse",
+          "center": [
+            0.34,
+            0.62
+          ],
+          "radii": [
+            0.15,
+            0.19
+          ]
+        },
+        {
+          "shape": "ellipse",
+          "center": [
+            0.73,
+            0.3
+          ],
+          "radii": [
+            0.12,
+            0.14
+          ]
+        }
+      ],
+      "sparse_region_interior_count": 23,
+      "sparse_region_interior_fraction": 0.005,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "befa4b65e274473569b0e0679b73a60da6fcbde5ab24f0b30c66b383468fde61"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_peaks_n0020000_feature_clean_seed100",
+      "experiment": "acc",
+      "purpose": "解析 Peaks 真值；高变化区域加密采样与局部细节恢复能力；无噪声精度；较大规模效率",
+      "surface": "peaks",
+      "num_points": 20000,
+      "sampling": "feature",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 1596,
+      "num_interior": 18400,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_peaks_n0020000_feature_clean_seed100.txt",
+      "ground_truth_file": "acc_peaks_n0020000_feature_clean_seed100.npz",
+      "visualization_file": "acc_peaks_n0020000_feature_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "bc072460df0bf588c39eb772eb2900591c829f6bd55608b3bcb85f4c7d803398"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_bspline15x15_n0000600_uniform_clean_seed100",
+      "experiment": "acc",
+      "purpose": "精确 B 样条真值与控制网格恢复；均匀非网格采样基准；无噪声精度；小规模效率",
+      "surface": "bspline",
+      "num_points": 600,
+      "sampling": "uniform",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 44,
+      "num_interior": 552,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_bspline15x15_n0000600_uniform_clean_seed100.txt",
+      "ground_truth_file": "acc_bspline15x15_n0000600_uniform_clean_seed100.npz",
+      "visualization_file": "acc_bspline15x15_n0000600_uniform_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 600,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "cf6bacc5979cf3d1d1a2da124fff0cd2747d1c062a2804d8c00acbdf62e1631f"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_bspline15x15_n0005000_uniform_clean_seed100",
+      "experiment": "acc",
+      "purpose": "精确 B 样条真值与控制网格恢复；均匀非网格采样基准；无噪声精度；中等规模效率",
+      "surface": "bspline",
+      "num_points": 5000,
+      "sampling": "uniform",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_bspline15x15_n0005000_uniform_clean_seed100.txt",
+      "ground_truth_file": "acc_bspline15x15_n0005000_uniform_clean_seed100.npz",
+      "visualization_file": "acc_bspline15x15_n0005000_uniform_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "d20235610893603e467ce56618236feecaacd2ddefbb5d4460ed76b94f4bd9df"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_bspline15x15_n0005000_clustered_clean_seed100",
+      "experiment": "acc",
+      "purpose": "精确 B 样条真值与控制网格恢复；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；中等规模效率",
+      "surface": "bspline",
+      "num_points": 5000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_bspline15x15_n0005000_clustered_clean_seed100.txt",
+      "ground_truth_file": "acc_bspline15x15_n0005000_clustered_clean_seed100.npz",
+      "visualization_file": "acc_bspline15x15_n0005000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "e7dbdbb45a2f87e20c956b1a877d7d3626d9c9fffe98f85e90a8038ba0dbf1f1"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_bspline15x15_n0005000_clustered_noise005_seed100",
+      "experiment": "acc",
+      "purpose": "精确 B 样条真值与控制网格恢复；聚簇非均匀采样与参数/节点自适应能力；含噪稳健性；中等规模效率",
+      "surface": "bspline",
+      "num_points": 5000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.005,
+      "noise_sigma_absolute": 0.05998792107422563,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_bspline15x15_n0005000_clustered_noise005_seed100.txt",
+      "ground_truth_file": "acc_bspline15x15_n0005000_clustered_noise005_seed100.npz",
+      "visualization_file": "acc_bspline15x15_n0005000_clustered_noise005_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "6be44b7b9955d85dd8d81ec5a9e476bbcf3292f6e77c38878a976c711e3aa33c"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_bspline15x15_n0005000_sparse_clean_seed100",
+      "experiment": "acc",
+      "purpose": "精确 B 样条真值与控制网格恢复；局部稀疏覆盖、SW稳定性与空洞区域外推能力；无噪声精度；中等规模效率",
+      "surface": "bspline",
+      "num_points": 5000,
+      "sampling": "sparse",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 396,
+      "num_interior": 4600,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_bspline15x15_n0005000_sparse_clean_seed100.txt",
+      "ground_truth_file": "acc_bspline15x15_n0005000_sparse_clean_seed100.npz",
+      "visualization_file": "acc_bspline15x15_n0005000_sparse_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 5000,
+      "sparse_regions": [
+        {
+          "shape": "ellipse",
+          "center": [
+            0.34,
+            0.62
+          ],
+          "radii": [
+            0.15,
+            0.19
+          ]
+        },
+        {
+          "shape": "ellipse",
+          "center": [
+            0.73,
+            0.3
+          ],
+          "radii": [
+            0.12,
+            0.14
+          ]
+        }
+      ],
+      "sparse_region_interior_count": 23,
+      "sparse_region_interior_fraction": 0.005,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "7bf42cb1b927cdcc7742be46adc7cc50b29bab248cd94d8b0711d3dd1995ff13"
+    },
+    {
+      "schema_version": 1,
+      "name": "acc_bspline15x15_n0020000_feature_clean_seed100",
+      "experiment": "acc",
+      "purpose": "精确 B 样条真值与控制网格恢复；高变化区域加密采样与局部细节恢复能力；无噪声精度；较大规模效率",
+      "surface": "bspline",
+      "num_points": 20000,
+      "sampling": "feature",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 1596,
+      "num_interior": 18400,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "acc_bspline15x15_n0020000_feature_clean_seed100.txt",
+      "ground_truth_file": "acc_bspline15x15_n0020000_feature_clean_seed100.npz",
+      "visualization_file": "acc_bspline15x15_n0020000_feature_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "89ce38b4d833f2306ed5b942fbb5f72e8245941e9a08e5180083b307d9497e1c"
+    },
+    {
+      "schema_version": 1,
+      "name": "eff_peaks_n0100000_clustered_clean_seed100",
+      "experiment": "eff",
+      "purpose": "大规模效率/内存扩展；解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "peaks",
+      "num_points": 100000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 7996,
+      "num_interior": 92000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "eff_peaks_n0100000_clustered_clean_seed100.txt",
+      "ground_truth_file": "eff_peaks_n0100000_clustered_clean_seed100.npz",
+      "visualization_file": "eff_peaks_n0100000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "7dcbf6ed3798b1a0afdde302996e9c2d710968a62fef7271b734a5a970c33b3d"
+    },
+    {
+      "schema_version": 1,
+      "name": "eff_peaks_n0500000_clustered_clean_seed100",
+      "experiment": "eff",
+      "purpose": "大规模效率/内存扩展；解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "peaks",
+      "num_points": 500000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 39996,
+      "num_interior": 460000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "eff_peaks_n0500000_clustered_clean_seed100.txt",
+      "ground_truth_file": "eff_peaks_n0500000_clustered_clean_seed100.npz",
+      "visualization_file": "eff_peaks_n0500000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "6b19a30e301d0d60bfa8c337f382701de19e811caf33f54983dc2e03d8317646"
+    },
+    {
+      "schema_version": 1,
+      "name": "eff_peaks_n1000000_clustered_clean_seed100",
+      "experiment": "eff",
+      "purpose": "大规模效率/内存扩展；解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "peaks",
+      "num_points": 1000000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 79996,
+      "num_interior": 920000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "eff_peaks_n1000000_clustered_clean_seed100.txt",
+      "ground_truth_file": "eff_peaks_n1000000_clustered_clean_seed100.npz",
+      "visualization_file": "eff_peaks_n1000000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "b3b6d792812cc59854f8c88d171dd443c0b0ab3ececae3a62b8317f05da61e1a"
+    },
+    {
+      "schema_version": 1,
+      "name": "eff_bspline15x15_n0100000_clustered_clean_seed100",
+      "experiment": "eff",
+      "purpose": "大规模效率/内存扩展；精确 B 样条真值与控制网格恢复；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "bspline",
+      "num_points": 100000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 7996,
+      "num_interior": 92000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "eff_bspline15x15_n0100000_clustered_clean_seed100.txt",
+      "ground_truth_file": "eff_bspline15x15_n0100000_clustered_clean_seed100.npz",
+      "visualization_file": "eff_bspline15x15_n0100000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "cf8fee401c4879e3ae1434e406d90a643cf1d3f1c0af9a60a7d242d2cccc561b"
+    },
+    {
+      "schema_version": 1,
+      "name": "eff_bspline15x15_n0500000_clustered_clean_seed100",
+      "experiment": "eff",
+      "purpose": "大规模效率/内存扩展；精确 B 样条真值与控制网格恢复；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "bspline",
+      "num_points": 500000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 39996,
+      "num_interior": 460000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "eff_bspline15x15_n0500000_clustered_clean_seed100.txt",
+      "ground_truth_file": "eff_bspline15x15_n0500000_clustered_clean_seed100.npz",
+      "visualization_file": "eff_bspline15x15_n0500000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "d8acfb4daa371758a32730291e2c9ce791c4285758a313d467f426a3a0d2f367"
+    },
+    {
+      "schema_version": 1,
+      "name": "eff_bspline15x15_n1000000_clustered_clean_seed100",
+      "experiment": "eff",
+      "purpose": "大规模效率/内存扩展；精确 B 样条真值与控制网格恢复；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "bspline",
+      "num_points": 1000000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 79996,
+      "num_interior": 920000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "eff_bspline15x15_n1000000_clustered_clean_seed100.txt",
+      "ground_truth_file": "eff_bspline15x15_n1000000_clustered_clean_seed100.npz",
+      "visualization_file": "eff_bspline15x15_n1000000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "512daca9ccb6d99a34b8ad32ea1e3c7e7279247dc41aee903d3241403cc010fe"
+    },
+    {
+      "schema_version": 1,
+      "name": "dof_peaks_n0100000_clustered_clean_seed100",
+      "experiment": "dof",
+      "purpose": "固定输入下的控制自由度与预条件求解器扩展；解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "peaks",
+      "num_points": 100000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": null,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 7996,
+      "num_interior": 92000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "dof_peaks_n0100000_clustered_clean_seed100.txt",
+      "ground_truth_file": "dof_peaks_n0100000_clustered_clean_seed100.npz",
+      "visualization_file": "dof_peaks_n0100000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "recommended_fit_control_grids": [
+        [
+          10,
+          10
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          66,
+          66
+        ]
+      ],
+      "recommended_num_iknot": [
+        [
+          6,
+          6
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          62,
+          62
+        ]
+      ],
+      "truth_type": "analytic",
+      "analytic_function": "MATLAB peaks(x,y)",
+      "xy_domain": [
+        [
+          -3.0,
+          3.0
+        ],
+        [
+          -3.0,
+          3.0
+        ]
+      ],
+      "sha256_txt": "7dcbf6ed3798b1a0afdde302996e9c2d710968a62fef7271b734a5a970c33b3d"
+    },
+    {
+      "schema_version": 1,
+      "name": "dof_bspline15x15_n0100000_clustered_clean_seed100",
+      "experiment": "dof",
+      "purpose": "固定输入下的控制自由度与预条件求解器扩展；精确 B 样条真值与控制网格恢复；聚簇非均匀采样与参数/节点自适应能力；无噪声精度；较大规模效率",
+      "surface": "bspline",
+      "num_points": 100000,
+      "sampling": "clustered",
+      "parameter_domain": [
+        [
+          0.0,
+          1.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "seed": 100,
+      "surface_seed": 20260908,
+      "boundary_ratio_requested": 0.08,
+      "num_corners": 4,
+      "num_boundary_scatter": 7996,
+      "num_interior": 92000,
+      "sample_kind_encoding": {
+        "interior": 0,
+        "boundary": 1,
+        "corner": 2
+      },
+      "noise_model": "independent isotropic Gaussian XYZ",
+      "noise_sigma_relative_to_reference_bbox_diagonal": 0.0,
+      "noise_sigma_absolute": 0.0,
+      "reference_grid_resolution": [
+        101,
+        101
+      ],
+      "observed_points_file": "dof_bspline15x15_n0100000_clustered_clean_seed100.txt",
+      "ground_truth_file": "dof_bspline15x15_n0100000_clustered_clean_seed100.npz",
+      "visualization_file": "dof_bspline15x15_n0100000_clustered_clean_seed100.png",
+      "visualization_surface_alpha": 0.7,
+      "visualization_points_always_on_top": true,
+      "visualized_point_count": 20000,
+      "recommended_fit_control_grids": [
+        [
+          10,
+          10
+        ],
+        [
+          15,
+          15
+        ],
+        [
+          18,
+          18
+        ],
+        [
+          34,
+          34
+        ],
+        [
+          66,
+          66
+        ]
+      ],
+      "recommended_num_iknot": [
+        [
+          6,
+          6
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          14,
+          14
+        ],
+        [
+          30,
+          30
+        ],
+        [
+          62,
+          62
+        ]
+      ],
+      "truth_type": "tensor_product_bspline",
+      "degree_u": 3,
+      "degree_v": 3,
+      "num_control_u": 15,
+      "num_control_v": 15,
+      "control_flatten_order": "u-major: flat_index = u_index * num_control_v + v_index",
+      "knot_type": "open-clamped mildly nonuniform",
+      "control_surface_profile": "multi_feature_radial_hat",
+      "control_surface_formula": "scaled radial sinc + two positive bumps + negative bump + curved ridge + damped wave + weak twist",
+      "control_surface_components": [
+        "1.55*sin(d)/d, d=(x^2+y^2)/2",
+        "off-center anisotropic positive Gaussian",
+        "second off-center anisotropic positive Gaussian",
+        "off-center anisotropic negative Gaussian",
+        "sinusoidally curved Gaussian ridge",
+        "damped directional wave",
+        "localized xy twist"
+      ],
+      "control_xy_range": [
+        [
+          -4.0,
+          4.0
+        ],
+        [
+          -4.0,
+          4.0
+        ]
+      ],
+      "sha256_txt": "cf8fee401c4879e3ae1434e406d90a643cf1d3f1c0af9a60a7d242d2cccc561b"
+    }
+  ]
+}

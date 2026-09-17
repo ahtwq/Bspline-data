@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "name": "acc_peaks_n0005000_clustered_noise005_seed100",
+  "experiment": "acc",
+  "purpose": "解析 Peaks 真值；聚簇非均匀采样与参数/节点自适应能力；含噪稳健性；中等规模效率",
+  "surface": "peaks",
+  "num_points": 5000,
+  "sampling": "clustered",
+  "parameter_domain": [
+    [
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      1.0
+    ]
+  ],
+  "seed": 100,
+  "surface_seed": null,
+  "boundary_ratio_requested": 0.08,
+  "num_corners": 4,
+  "num_boundary_scatter": 396,
+  "num_interior": 4600,
+  "sample_kind_encoding": {
+    "interior": 0,
+    "boundary": 1,
+    "corner": 2
+  },
+  "noise_model": "independent isotropic Gaussian XYZ",
+  "noise_sigma_relative_to_reference_bbox_diagonal": 0.005,
+  "noise_sigma_absolute": 0.08463921596789595,
+  "reference_grid_resolution": [
+    101,
+    101
+  ],
+  "observed_points_file": "acc_peaks_n0005000_clustered_noise005_seed100.txt",
+  "ground_truth_file": "acc_peaks_n0005000_clustered_noise005_seed100.npz",
+  "visualization_file": "acc_peaks_n0005000_clustered_noise005_seed100.png",
+  "visualization_surface_alpha": 0.7,
+  "visualization_points_always_on_top": true,
+  "visualized_point_count": 5000,
+  "truth_type": "analytic",
+  "analytic_function": "MATLAB peaks(x,y)",
+  "xy_domain": [
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -3.0,
+      3.0
+    ]
+  ],
+  "sha256_txt": "b388b101d13b7a334c06ec70f3fd3adecfd02629656f220d805815ee65a61ee2"
+}
